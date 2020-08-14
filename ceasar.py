@@ -1,4 +1,3 @@
-
 def ceasar_cipher(text, key, decrypt = True):
 
     """
@@ -6,7 +5,7 @@ def ceasar_cipher(text, key, decrypt = True):
     :param text: String
     :param key:  Integer 1-26
     :param decrypt: True, False
-    :return: Decrypted message
+    :return: De/encrypted message
     """
 
     text_ = list(text.lower())
@@ -22,6 +21,9 @@ def ceasar_cipher(text, key, decrypt = True):
                 message.append(new_char)
             else:
                 message.append(i)
+
+        return "".join(message)
+
     else:
         for i in text_:
             if i in alphabet:
@@ -32,14 +34,13 @@ def ceasar_cipher(text, key, decrypt = True):
             else:
                 message.append(i)
 
-
-    return "".join(message)
+        return "".join(message).upper()
 
 
 # Test case
 
-d = "BMFY NX FKKQZJSHJ? IJHWJFXNSL DTZW BNXMJX, FSI GJNSL XFYNXKNJIBNYM BMFY NX JSTZLM KTW DTZ."
-e = "what is affluence? decreasing your wishes, and being satisfiedwith what is enough for you."
+d = "BMFY NX FKKQZJSHJ? IJHWJFXNSL DTZW BNXMJX, FSI GJNSL XFYNXKNJI BNYM BMFY NX JSTZLM KTW DTZ."
+e = "what is affluence? decreasing your wishes, and being satisfied with what is enough for you."
 
 print(ceasar_cipher(d, 5))
 print(ceasar_cipher(e, 5, False))

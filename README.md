@@ -1,5 +1,12 @@
 # Cryptography
-Repository where several cypers are coded in python
+Repository where several ciphers are coded in python
 
 ## Ciphers
+
+##### Classical Ciphers
 * Ceasar Cipher
+* Permutation Cipher
+
+## Analysis
+
+* Frequency analysis (tbd)
